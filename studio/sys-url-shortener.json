@@ -1,0 +1,27 @@
+{
+  "step": 0,
+  "nodes": [
+    {
+      "id": "nmvy8zt7j0",
+      "type": "client",
+      "label": "Client",
+      "x": 367,
+      "y": 298
+    },
+    {
+      "id": "nmvy90bkz6",
+      "type": "lb",
+      "label": "Load balancer",
+      "x": 679,
+      "y": 288
+    }
+  ],
+  "edges": [
+    {
+      "source": "nmvy8zt7j0",
+      "target": "nmvy90bkz6",
+      "sh": "right",
+      "th": "left"
+    }
+  ]
+}

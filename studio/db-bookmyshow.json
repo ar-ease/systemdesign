@@ -1,0 +1,41 @@
+{
+  "step": 0,
+  "schema": {
+    "tables": [
+      {
+        "id": "tmvy92hvj0",
+        "name": "movie",
+        "x": 0,
+        "y": -17,
+        "indexes": [],
+        "columns": [
+          {
+            "id": "cmvy92hvj1",
+            "name": "id",
+            "type": "bigint",
+            "pk": true,
+            "unique": false,
+            "nullable": false
+          }
+        ]
+      },
+      {
+        "id": "tmvy93ffr4",
+        "name": "screens",
+        "x": 320,
+        "y": 0,
+        "indexes": [],
+        "columns": [
+          {
+            "id": "cmvy93ffr5",
+            "name": "id",
+            "type": "bigint",
+            "pk": true,
+            "unique": false,
+            "nullable": false
+          }
+        ]
+      }
+    ]
+  }
+}
