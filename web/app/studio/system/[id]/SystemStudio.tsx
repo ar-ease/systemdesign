@@ -1,6 +1,6 @@
 "use client";
 
-import "@xyflow/react/dist/style.css";
+import "../../../xyflow.css";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
