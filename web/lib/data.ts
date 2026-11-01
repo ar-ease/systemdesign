@@ -333,7 +333,7 @@ export const WEEKS = [
   "BookMyShow, Razorpay-style payments, Swiggy dispatch; publish your notes",
 ];
 
-export const XP = { topic: 20, recall: 10, boss: 50, lab: 100, system: 150 };
+export const XP = { topic: 20, recall: 10, boss: 50, lab: 100, system: 150, studio: 30 };
 export const RANKS = [
   { name: "Intern", min: 0 },
   { name: "Junior", min: 500 },

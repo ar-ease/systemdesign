@@ -10,6 +10,7 @@ const WRITABLE = [
   /^sections\/\d\d-[a-z0-9-]+\/boss-fight\.md$/,
   /^systems\/[a-z0-9-]+\.md$/,
   /^labs\/\d\d-[a-z0-9-]+\/RESULTS\.md$/,
+  /^studio\/(sys|db)-[a-z0-9-]+\.json$/,
 ];
 const READABLE = [...WRITABLE, /^templates\/[a-z0-9-]+\.md$/, /^labs\/\d\d-[a-z0-9-]+\/[A-Za-z0-9_.-]+$/];
 

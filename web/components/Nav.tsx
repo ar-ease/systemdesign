@@ -7,6 +7,7 @@ import { stats, useProgress } from "@/lib/progress";
 const LINKS = [
   { href: "/", label: "Dashboard" },
   { href: "/levels", label: "Levels" },
+  { href: "/studio", label: "Studio" },
   { href: "/review", label: "Review" },
   { href: "/labs", label: "Labs" },
   { href: "/systems", label: "Systems" },

@@ -23,3 +23,6 @@ export async function PUT(req: Request) {
     return NextResponse.json({ error: String(e) }, { status: 500 });
   }
 }
+
+// sendBeacon (used when the tab closes) can only POST.
+export const POST = PUT;

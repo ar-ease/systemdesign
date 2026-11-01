@@ -14,6 +14,7 @@ Open http://localhost:3000.
 | --- | --- |
 | **Dashboard** | Today's quest, XP and rank, streak, activity heatmap, 12-week plan, level map |
 | **Levels → a level** | Tick topics, write notes, play the flashcard recall round, fight the boss (45-min timer) |
+| **Studio** | Learn by drawing. **System design**: drag in load balancers, caches, queues and so on, and connect them; the coach checks your design live and explains wrong approaches (“✋ Not like this”). **Database design**: build tables, keys and indexes; the ER diagram and SQL update as you type. Hints and reference solutions included |
 | **Review** | Spaced recall across every level you've started (`space` reveal · `1` again · `2` got it) |
 | **Labs** | Lab instructions + a `RESULTS.md` editor; unbuilt labs give you a prompt to ask Claude to set them up |
 | **Systems** | Timed system-design interviews with a mock-interviewer prompt and score |
@@ -24,10 +25,11 @@ Open http://localhost:3000.
 - `sections/<level>/boss-fight.md` holds your boss-fight answers
 - `systems/<name>.md` holds your full designs
 - `labs/<lab>/RESULTS.md` holds your lab numbers
+- `studio/*.json` holds your Studio drawings and schemas
 
 The app is meant to run locally. If you deploy it somewhere read-only (like Vercel), it still works but saves to your browser instead of the repo.
 
-**XP:** note 20 · flashcard known 10 · boss ≥ 7/10 50 · lab 100 · system ≥ 7/10 150. **Ranks:** Intern → Junior (500) → Mid (1500) → Senior (3000) → Staff (5000).
+**XP:** note 20 · flashcard known 10 · Studio step 30 · boss ≥ 7/10 50 · lab 100 · system ≥ 7/10 150. **Ranks:** Intern → Junior (500) → Mid (1500) → Senior (3000) → Staff (5000).
 
 You can also skip the app and edit the Markdown directly. `PROGRESS.md` is the manual tracker for that.
 

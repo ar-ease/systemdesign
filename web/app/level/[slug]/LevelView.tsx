@@ -7,6 +7,8 @@ import { levelStats, useProgress } from "@/lib/progress";
 import Bar from "@/components/Bar";
 import BossFight from "@/components/BossFight";
 import Flashcards from "@/components/Flashcards";
+import { PUZZLES } from "@/lib/studio/puzzles";
+import { DB_PUZZLES } from "@/lib/studio/dbPuzzles";
 
 export default function LevelView({ slug }: { slug: string }) {
   const level = levelBySlug(slug)!;
@@ -74,6 +76,18 @@ export default function LevelView({ slug }: { slug: string }) {
               ))}
             </div>
           )}
+          {(() => {
+            const sys = PUZZLES.filter((x) => x.level === level.num);
+            const db = DB_PUZZLES.filter((x) => x.level === level.num);
+            if (!sys.length && !db.length) return null;
+            return (
+              <div className="card">
+                <h2>🎨 Practise by drawing</h2>
+                {sys.map((x) => <div key={x.id} className="check"><span className="grow"><Link href={`/studio/system/${x.id}`}>🧩 {x.title}</Link><br /><span className="muted small">{x.blurb}</span></span></div>)}
+                {db.map((x) => <div key={x.id} className="check"><span className="grow"><Link href={`/studio/db/${x.id}`}>🗄️ {x.title}</Link><br /><span className="muted small">{x.blurb}</span></span></div>)}
+              </div>
+            );
+          })()}
           <div className="card">
             <h2>Ask Claude</h2>
             <p className="small muted" style={{ marginBottom: 6 }}>Copy into a chat when a topic doesn&apos;t click:</p>

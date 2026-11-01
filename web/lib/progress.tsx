@@ -14,10 +14,11 @@ export type Progress = {
   systems: Record<string, number>; // slug -> score 1-10
   weeks: Record<string, boolean>;
   activity: Record<string, number>; // "YYYY-MM-DD" -> actions that day
+  studio: Record<string, boolean>; // "sys:grow-app:0" / "db:udemy:1" -> step cleared
 };
 
 export const EMPTY: Progress = {
-  version: 1, startedAt: null, topics: {}, recall: {}, boss: {}, labs: {}, systems: {}, weeks: {}, activity: {},
+  version: 1, startedAt: null, topics: {}, recall: {}, boss: {}, labs: {}, systems: {}, weeks: {}, activity: {}, studio: {},
 };
 
 const LS_KEY = "sd-quest-progress";
@@ -49,6 +50,7 @@ export function stats(p: Progress) {
   xp += Object.values(p.boss).filter((s) => s >= PASS).length * XP.boss;
   xp += Object.values(p.labs).filter(Boolean).length * XP.lab;
   xp += Object.values(p.systems).filter((s) => s >= PASS).length * XP.system;
+  xp += Object.values(p.studio ?? {}).filter(Boolean).length * XP.studio;
 
   const rankIdx = RANKS.reduce((acc, r, i) => (xp >= r.min ? i : acc), 0);
   const rank = RANKS[rankIdx];
