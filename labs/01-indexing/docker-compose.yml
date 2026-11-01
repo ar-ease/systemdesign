@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_PASSWORD: dev
+      POSTGRES_DB: lab
+    ports: ["5432:5432"]
+    volumes:
+      - ./seed.sql:/docker-entrypoint-initdb.d/01-seed.sql:ro
+      - ./queries.sql:/lab/queries.sql:ro
+    shm_size: 512mb

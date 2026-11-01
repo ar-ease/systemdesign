@@ -1,0 +1,36 @@
+# System Design Quest
+
+A self-study repo that works like a game: **18 levels** (from the AlgoMaster syllabus), **10 Docker labs** (database and infra work you run on your laptop), and **9 boss systems** (timed full designs).
+
+## How it works
+The learning loop is the same for every topic:
+
+> **what breaks → the idea that fixes it → I design it → I put it under load → I fix what breaks → I write down the numbers**
+
+| Thing | Where | What you do |
+| --- | --- | --- |
+| Level map, XP, streak | [`PROGRESS.md`](PROGRESS.md) | Tick boxes and log XP at the end of each session |
+| Levels | [`sections/`](sections/) | Read lessons, write notes in `notes/`, then do `challenges.md` |
+| Labs | [`labs/`](labs/) | Run with Docker, break things, fill in `RESULTS.md` |
+| Boss systems | [`systems/`](systems/) | 45-minute timed designs using `templates/system-design.md` |
+| Templates | [`templates/`](templates/) | Copy them for new concept notes, designs and lab results |
+
+## Daily routine (~1.5 h)
+1. **10 min warm-up:** answer 3 random recall questions from a level you have already cleared.
+2. **40 min learn:** read one or two lessons for this week's level.
+3. **20 min write:** fill a concept note from memory using `templates/concept.md`.
+4. **20 min do:** either a lab step or a boss-fight attempt.
+5. **Commit:** update `PROGRESS.md` (XP and session log) and run `git commit -am "day N: <topic>"`.
+
+## Using Claude as your tutor
+- **Explainer:** "Teach me read replicas as a story of one app growing. Problem first, then the fix, then a trade-offs table, then 5 quiz questions."
+- **Grader:** "Here is my note on X. What's wrong or missing for an interview at a product company?"
+- **Interviewer:** "Act as a senior interviewer. Ask me to design BookMyShow. Push on double-booking and payments. Grade me at the end."
+- **Lab coach:** "Give me a docker-compose for a Postgres primary plus a replica and a script to measure replication lag."
+
+## Rules
+- Use one main resource per topic. Opening more tabs doesn't count as learning.
+- Never write "it got faster". Write the throughput, p50, p99 and error rate before and after.
+- Once you have about 20 solid notes, publish them as a site (Quartz or Astro). Don't build the site before that.
+
+Start here: **[Level 01 · Core Concepts](sections/01-core-concepts/)**
